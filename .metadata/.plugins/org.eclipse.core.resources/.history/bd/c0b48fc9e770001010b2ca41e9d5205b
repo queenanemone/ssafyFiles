@@ -1,0 +1,15 @@
+package recursive;
+
+public class Recursive09 {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		recursive(1);
+	}
+	
+	private static int recursive(int idx)
+	{
+		return idx;
+	}
+}

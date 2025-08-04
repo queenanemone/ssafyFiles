@@ -1,0 +1,15 @@
+import java.io.*;
+
+public class Main {
+
+	static int N;
+	static int R;
+	static boolean visited[];
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String[] tokens = br.readLine().trim().split(" ");
+	}
+
+}

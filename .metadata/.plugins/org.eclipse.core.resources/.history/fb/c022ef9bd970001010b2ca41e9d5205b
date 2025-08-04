@@ -1,0 +1,61 @@
+import java.io.*;
+import java.util.Arrays;
+
+public class Main {
+
+	static int N;
+	static int R;
+	static boolean[] visited;
+	static int[] sel;
+	static int[] arr = new int[] {1, 2, 3, 4, 5};
+	static int count = 0;
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String[] tokens = br.readLine().trim().split(" ");
+		N = Integer.parseInt(tokens[0]);
+		R = Integer.parseInt(tokens[1]);
+		visited = new boolean[N];
+		sel = new int[R];
+		func1(0);
+		System.out.println(count);
+		visited = new boolean[N];
+		sel = new int[R];
+		func2(0, 0);
+	}
+	static void func1(int cnt)
+	{
+		if (cnt == R)
+		{
+			System.out.println(Arrays.toString(sel));
+			count++;
+			return;
+		}
+		
+		for (int i = 0; i < N; i++)
+		{
+			if (!visited[i])
+			{
+				visited[i] = true;
+				sel[cnt] = arr[i];
+				func1(cnt + 1);
+				visited[i] = false;
+			}
+		}
+	}
+	static void func2(int start, int count)
+	{
+		if (count == R)
+		{
+			System.out.println(Arrays.toString(sel));
+			return;
+		}
+		
+		for (int i = start; i < N; i++)
+		{
+			sel[i] = arr[count];
+			func2(i + 1, count + 1);
+		}
+	}
+}

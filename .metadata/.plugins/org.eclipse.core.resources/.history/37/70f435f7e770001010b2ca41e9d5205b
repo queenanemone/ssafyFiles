@@ -1,0 +1,21 @@
+package recursive;
+
+public class Recursive09 {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		recursive(1);
+	}
+	
+	//idx : 순서값
+	//return : sum
+	private static int recursive(int idx)
+	{
+		//basis part
+		if (idx == 10)
+		{
+			
+		}
+	}
+}
